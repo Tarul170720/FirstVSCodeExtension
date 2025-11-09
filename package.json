@@ -1,0 +1,51 @@
+{
+  "name": "my-fist-extension",
+  "displayName": "my fist extension",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.105.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:my-fist-extension.helloWorld",
+    "onCommand:my-fist-extension.serachWdsBlogExample",
+    "onCommand:my-fist-extension.readCodeFiles"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "my-fist-extension.helloWorld",
+        "title": "Hello World"
+      },
+      {
+        "command": "my-fist-extension.serachWdsBlogExample",
+        "title": "Search WDS Blog Example"
+      },
+      {
+        "command": "my-fist-extension.readCodeFiles",
+        "title": "Reading Code Files"
+      }
+    ]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "22.x",
+    "@types/vscode": "^1.105.0",
+    "@vscode/test-cli": "^0.0.11",
+    "@vscode/test-electron": "^2.5.2",
+    "eslint": "^9.36.0"
+  },
+  "dependencies": {
+    "axios": "^1.13.2",
+    "fast-xml-parser": "^5.3.1"
+  }
+}
